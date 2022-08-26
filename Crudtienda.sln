@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crudtienda", "Crudtienda\Crudtienda.csproj", "{8C817C90-6527-4927-A78D-D12E4891CD1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C817C90-6527-4927-A78D-D12E4891CD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C817C90-6527-4927-A78D-D12E4891CD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C817C90-6527-4927-A78D-D12E4891CD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C817C90-6527-4927-A78D-D12E4891CD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AB4B25B-7AAC-4343-84E1-BD8F4CCF0751}
+	EndGlobalSection
+EndGlobal

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtPreciopublico = new System.Windows.Forms.TextBox();
-            this.txtExistencia = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.txtExistencia = new System.Windows.Forms.TextBox();
+            this.txtPreciopublico = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -71,57 +71,43 @@
             this.groupBox1.Text = "Datos de Productos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
+            // txtId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo:";
+            this.txtId.Location = new System.Drawing.Point(320, 177);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 22);
+            this.txtId.TabIndex = 11;
+            this.txtId.Visible = false;
             // 
-            // txtCodigo
+            // txtExistencia
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(146, 32);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(162, 22);
-            this.txtCodigo.TabIndex = 1;
+            this.txtExistencia.Location = new System.Drawing.Point(146, 212);
+            this.txtExistencia.Name = "txtExistencia";
+            this.txtExistencia.Size = new System.Drawing.Size(274, 22);
+            this.txtExistencia.TabIndex = 10;
             // 
-            // btnBuscar
+            // txtPreciopublico
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(328, 32);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(92, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.txtPreciopublico.Location = new System.Drawing.Point(146, 177);
+            this.txtPreciopublico.Name = "txtPreciopublico";
+            this.txtPreciopublico.Size = new System.Drawing.Size(145, 22);
+            this.txtPreciopublico.TabIndex = 9;
             // 
-            // label2
+            // txtDescripcion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre";
+            this.txtDescripcion.Location = new System.Drawing.Point(146, 106);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(274, 62);
+            this.txtDescripcion.TabIndex = 8;
             // 
-            // label3
+            // txtNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Descripcion";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Precio publico";
+            this.txtNombre.Location = new System.Drawing.Point(146, 70);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(274, 22);
+            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -132,43 +118,58 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Existencias";
             // 
-            // txtNombre
+            // label4
             // 
-            this.txtNombre.Location = new System.Drawing.Point(146, 70);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(274, 22);
-            this.txtNombre.TabIndex = 7;
-            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Precio publico";
             // 
-            // txtDescripcion
+            // label3
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(146, 106);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(274, 62);
-            this.txtDescripcion.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Descripcion";
             // 
-            // txtPreciopublico
+            // label2
             // 
-            this.txtPreciopublico.Location = new System.Drawing.Point(146, 177);
-            this.txtPreciopublico.Name = "txtPreciopublico";
-            this.txtPreciopublico.Size = new System.Drawing.Size(145, 22);
-            this.txtPreciopublico.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre";
             // 
-            // txtExistencia
+            // btnBuscar
             // 
-            this.txtExistencia.Location = new System.Drawing.Point(146, 212);
-            this.txtExistencia.Name = "txtExistencia";
-            this.txtExistencia.Size = new System.Drawing.Size(274, 22);
-            this.txtExistencia.TabIndex = 10;
+            this.btnBuscar.Location = new System.Drawing.Point(328, 32);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(92, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtId
+            // txtCodigo
             // 
-            this.txtId.Location = new System.Drawing.Point(320, 177);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 22);
-            this.txtId.TabIndex = 11;
-            this.txtId.Visible = false;
+            this.txtCodigo.Location = new System.Drawing.Point(146, 32);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(162, 22);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codigo:";
             // 
             // btnGuardar
             // 
@@ -188,6 +189,7 @@
             this.btnActualizar.TabIndex = 13;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBorrar
             // 
@@ -197,6 +199,7 @@
             this.btnBorrar.TabIndex = 14;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnLimpiar
             // 
@@ -206,6 +209,7 @@
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // Form1
             // 
@@ -218,7 +222,8 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Tienda";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

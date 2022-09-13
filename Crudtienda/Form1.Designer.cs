@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtExistencia = new System.Windows.Forms.TextBox();
             this.txtPreciopublico = new System.Windows.Forms.TextBox();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxCategoria);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.txtExistencia);
             this.groupBox1.Controls.Add(this.txtPreciopublico);
@@ -65,11 +69,28 @@
             this.groupBox1.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(2, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(445, 251);
+            this.groupBox1.Size = new System.Drawing.Size(445, 334);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Productos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(146, 252);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(274, 24);
+            this.cbxCategoria.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 258);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Categorias";
             // 
             // txtId
             // 
@@ -83,6 +104,7 @@
             // 
             this.txtExistencia.Location = new System.Drawing.Point(146, 212);
             this.txtExistencia.Name = "txtExistencia";
+            this.txtExistencia.ShortcutsEnabled = false;
             this.txtExistencia.Size = new System.Drawing.Size(274, 22);
             this.txtExistencia.TabIndex = 10;
             // 
@@ -90,6 +112,7 @@
             // 
             this.txtPreciopublico.Location = new System.Drawing.Point(146, 177);
             this.txtPreciopublico.Name = "txtPreciopublico";
+            this.txtPreciopublico.ShortcutsEnabled = false;
             this.txtPreciopublico.Size = new System.Drawing.Size(145, 22);
             this.txtPreciopublico.TabIndex = 9;
             // 
@@ -108,6 +131,7 @@
             this.txtNombre.Size = new System.Drawing.Size(274, 22);
             this.txtNombre.TabIndex = 7;
             this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label5
             // 
@@ -159,8 +183,10 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(146, 32);
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ShortcutsEnabled = false;
             this.txtCodigo.Size = new System.Drawing.Size(162, 22);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label1
             // 
@@ -173,7 +199,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(38, 260);
+            this.btnGuardar.Location = new System.Drawing.Point(38, 343);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 12;
@@ -183,7 +209,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(139, 260);
+            this.btnActualizar.Location = new System.Drawing.Point(139, 343);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 13;
@@ -193,7 +219,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(235, 260);
+            this.btnBorrar.Location = new System.Drawing.Point(235, 343);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 14;
@@ -203,7 +229,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(347, 260);
+            this.btnLimpiar.Location = new System.Drawing.Point(347, 343);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 15;
@@ -215,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 288);
+            this.ClientSize = new System.Drawing.Size(460, 378);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnActualizar);
@@ -249,6 +275,8 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.Label label6;
     }
 }
 
